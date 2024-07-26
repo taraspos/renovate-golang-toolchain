@@ -2,5 +2,20 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base"
+  ],
+  "packageRules": [
+    {
+      "description": "Disable other gomod updates for now",
+      "matchManagers": ["gomod"],
+      "enabled": false
+    },
+    {
+      "description": "Update golang version and toolchain in gomod",
+      "matchManagers": ["gomod"],
+      "matchDatasources": ["golang-version"],
+      "matchDepTypes": ["golang", "toolchain"],
+      "rangeStrategy": "bump",
+      "enabled": true
+    }
   ]
 }
