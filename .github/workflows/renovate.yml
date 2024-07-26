@@ -34,3 +34,4 @@ jobs:
           LOG_LEVEL: "${{inputs.log-level || 'info'}}"
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
+          renovate-version: 37.421.10
